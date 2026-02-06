@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-montserrat",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-heading",
 });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,12 +28,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${montserrat.variable} ${poppins.variable} font-sans bg-black text-white `}
       >
-        {children}
+        <Header className="fixed top-0 z-50 w-full" />
+        <main>
+          {children}
+        </main>
       </body>
     </html>
   );

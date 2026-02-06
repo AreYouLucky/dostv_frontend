@@ -1,9 +1,12 @@
 import React from 'react'
+import Banner from './components/banner'
 
-function page() {
+function Home() {
   return (
-    <div>Home page</div>
+    <div className='w-full relative'>
+      {/* <Banner /> */}
+    </div>
   )
 }
 
-export default page 
+export default Home 
