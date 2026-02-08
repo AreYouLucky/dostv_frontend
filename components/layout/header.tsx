@@ -29,7 +29,7 @@ export default function Header({ className = "" }: { className?: string }) {
           </ul>
         </div>
         <div className=" items-center gap-4 flex">
-          <div className="hidden sm:flex items-center border rounded-2xl px-3 py-2">
+          <div className="hidden sm:flex items-center border rounded-2xl px-3 py-2 border-slate-200">
             <input
               type="text"
               placeholder="Search..."
